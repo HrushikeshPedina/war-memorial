@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wing Commander William MacDonald Goodman</title>
+<style>
+body{font-family:Arial,sans-serif;background:#f4f4f4;text-align:center;margin:0}
+.container{max-width:500px;margin:auto;padding:20px}
+button{width:100%;padding:16px;margin:15px 0;font-size:1.2rem;border:none;border-radius:6px;background:#1a1a1a;color:#fff}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Wing Commander William MacDonald Goodman</h1>
+<p>Select Language / भाषा चुनें</p>
+<button onclick="play('hi')">▶ हिंदी</button>
+<button onclick="play('en')">▶ English</button>
+<audio id="p"></audio>
+</div>
+<script>
+function play(lang){
+ const p=document.getElementById('p');
+ p.src = lang==='hi' ? 'audio/hero21-hi.mp3' : 'audio/hero21-en.mp3';
+ p.play();
+}
+</script>
+</body>
+</html>
